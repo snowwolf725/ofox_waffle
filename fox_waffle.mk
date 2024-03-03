@@ -20,13 +20,10 @@
 
 # OrangeFox-specific settings #
 
-# Identifier for common folder
-COMMON_SOC := sm85xx
-
 # Define hardware platform
-PRODUCT_PLATFORM := kalama
+PRODUCT_PLATFORM := pineapple
 
-PRODUCT_DEVICE := waffle
+PRODUCT_DEVICE := waffle2
 PRODUCT_NAME := $(CUSTOM_VENDOR)_$(PRODUCT_DEVICE)
 PRODUCT_MODEL := CPH2583
 PRODUCT_SYSTEM_NAME := $(PRODUCT_MODEL)
