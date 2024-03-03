@@ -45,7 +45,7 @@ BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 BOARD_KERNEL_IMAGE_NAME := kernel
 BOARD_RAMDISK_USE_LZ4 := true
-TARGET_PREBUILT_KERNEL := $(COMMON_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
+TARGET_PREBUILT_KERNEL := device/oneplus/waffle/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
 
 # Partition Info
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
@@ -107,7 +107,7 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     vendor.display.config@1.0 \
     vendor.display.config@2.0 \
     libdebuggerd_client
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/oneplus/waffle/recovery.fstab
 
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
@@ -128,8 +128,8 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Extras
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+TARGET_SYSTEM_PROP += device/oneplus/waffle/system.prop
+TARGET_VENDOR_PROP += device/oneplus/waffle/vendor.prop
 
 # TWRP specific build flags
 TW_FRAMERATE := 120

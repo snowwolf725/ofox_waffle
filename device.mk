@@ -22,7 +22,7 @@
 
 # Inherit from common AOSP config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -104,7 +104,7 @@ PRODUCT_PACKAGES += \
     qcom_decrypt_fbe
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
+#PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH)
 
 #namespace definition for librecovery_updater
@@ -116,7 +116,7 @@ SOONG_CONFIG_ufsbsg_ufsframework := bsg
 
 # OEM otacerts
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(COMMON_PATH)/security/otacert
+    device/oneplus/waffle/security/otacert
 
 
 # System AVB
