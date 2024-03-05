@@ -19,7 +19,7 @@
 #
 
 # Inherit from OEM SOC-common
-COMMON_PATH := device/oneplus/sm85xx-common
+COMMON_PATH := device/oneplus/sm8650-common
 $(call inherit-product, $(COMMON_PATH)/device-common.mk)
 
 LOCAL_PATH := device/oneplus/waffle

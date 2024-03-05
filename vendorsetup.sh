@@ -19,7 +19,39 @@
 #
 FDEVICE="waffle"
 
-export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v27.zip
+export TARGET_ARCH="arm64-v8a"
+
+# Some about us
+export FOX_VERSION="R12.1"
+export OF_MAINTAINER=Wishmasterflo
+
+# Build environment stuffs
+export FOX_BUILD_DEVICE="OnePlus12"
+export ALLOW_MISSING_DEPENDENCIES=true
+export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+export TARGET_DEVICE_ALT="waffle, Waffle, OnePlus12, OnePlus 12, OP5929L1"
+export FOX_TARGET_DEVICES="waffle, Waffle, OnePlus12, OnePlus 12, OP5929L1"
+export BUILD_USERNAME="SnowWolf725"
+export BUILD_HOSTNAME="android-build"
+
+# Use magisk boot for patching
+export OF_USE_MAGISKBOOT=1
+export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
+export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
+
+# We have a/b partitions
+export FOX_AB_DEVICE=1
+export FOX_VIRTUAL_AB_DEVICE=1
+export OF_AB_DEVICE_WITH_RECOVERY_PARTITION=1
+
+# Device stuff
+export OF_KEEP_FORCED_ENCRYPTION=1
+export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
+export OF_FBE_METADATA_MOUNT_IGNORE=1
+export OF_PATCH_AVB20=1
+export OF_USE_LEGACY_BATTERY_SERVICES=1
+
+export FOX_USE_SPECIFIC_MAGISK_ZIP=device/oneplus/waffle/Magisk-v27.0.zip
 export FOX_ENABLE_APP_MANAGER=1
 export FOX_USE_BASH_SHELL=1
 export FOX_ASH_IS_BASH=1

@@ -45,13 +45,23 @@ on init
     start boot-hal-1-2
 
 # disable partiton mount on oneplus 12
-#on fs
-#    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+on fs
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    mkdir /dev/block/bootdevice/ 0770 shell system
+    mkdir /dev/block/bootdevice/by-name/ 0770 shell system
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name/boot_a /dev/block/bootdevice/by-name/boot_a
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name/boot_b /dev/block/bootdevice/by-name/boot_b
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name/system /dev/block/bootdevice/by-name/system
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name/modemst1 /dev/block/bootdevice/by-name/modemst1
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name/modemst2 /dev/block/bootdevice/by-name/modemst2
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name/ocdt /dev/block/bootdevice/by-name/ocdt
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name/persist /dev/block/bootdevice/by-name/persist
 #    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+#    write /proc/sys/kernel/firmware_config/ignore_sysfs_fallback = 1
 #    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
 
 on boot
-    setprop sys.usb.config adb
+    setprop sys.usb.config adb,mtp
     start variant-script
     start overrideprops
 

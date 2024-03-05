@@ -19,7 +19,7 @@
 #
 
 # Identifier for common folder
-COMMON_SOC := sm85xx
+COMMON_SOC := sm8650
 
 # Define hardware platform
 PRODUCT_PLATFORM := kalama
@@ -40,9 +40,9 @@ BOARD_VENDOR := $(or $(word 2,$(subst /, ,$(firstword $(MAKEFILE_LIST)))),$(valu
 
 PRODUCT_DEVICE := waffle
 PRODUCT_NAME := $(CUSTOM_VENDOR)_$(PRODUCT_DEVICE)
-PRODUCT_MODEL := CPH2449
+PRODUCT_MODEL := CPH2583
 PRODUCT_SYSTEM_NAME := $(PRODUCT_MODEL)
-PRODUCT_SYSTEM_DEVICE := OP594DL1
+PRODUCT_SYSTEM_DEVICE := OP5929L1
 PRODUCT_BRAND := $(BOARD_VENDOR)
 PRODUCT_MANUFACTURER := $(PRODUCT_BRAND)
 
@@ -51,7 +51,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
 # Common path for device trees
-COMMON_PATH := device/oneplus/sm85xx-common
+COMMON_PATH := device/oneplus/sm8650-common
 
 # Device path for OEM device tree
 DEVICE_PATH := device/oneplus/waffle
