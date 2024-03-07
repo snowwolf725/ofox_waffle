@@ -22,7 +22,7 @@
 COMMON_SOC := sm8650
 
 # Define hardware platform
-PRODUCT_PLATFORM := kalama
+PRODUCT_PLATFORM := pineapple
 
 # Release name (automatically taken from this file's suffix)
 PRODUCT_RELEASE_NAME := $(lastword $(subst /, ,$(lastword $(subst _, ,$(firstword $(subst ., ,$(MAKEFILE_LIST)))))))

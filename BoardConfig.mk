@@ -27,7 +27,7 @@ TW_THEME := portrait_hdpi
 
 # TWRP specific build flags
 TW_FRAMERATE := 120
-TW_MAX_BRIGHTNESS := 2000
+TW_MAX_BRIGHTNESS := 3000
 
 # Vibrator
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
@@ -38,4 +38,6 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
      $(TARGET_OUT_SHARED_LIBRARIES)/libexpat.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.vibrator-V2-ndk.so
 
+# fastbootD
+TW_INCLUDE_FASTBOOTD := true
 #
