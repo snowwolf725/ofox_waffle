@@ -41,7 +41,6 @@ export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 
 # We have a/b partitions
 export FOX_AB_DEVICE=1
-export FOX_VIRTUAL_AB_DEVICE=1
 export OF_AB_DEVICE_WITH_RECOVERY_PARTITION=1
 
 # Device stuff
@@ -51,7 +50,7 @@ export OF_FBE_METADATA_MOUNT_IGNORE=1
 export OF_PATCH_AVB20=1
 export OF_USE_LEGACY_BATTERY_SERVICES=1
 
-export FOX_USE_SPECIFIC_MAGISK_ZIP=device/oneplus/waffle/Magisk-v27.0.zip
+export FOX_USE_SPECIFIC_MAGISK_ZIP=$(pwd)/device/oneplus/waffle/Magisk-v27.0.zip
 export FOX_ENABLE_APP_MANAGER=1
 export FOX_USE_BASH_SHELL=1
 export FOX_ASH_IS_BASH=1

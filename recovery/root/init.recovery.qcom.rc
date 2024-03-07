@@ -56,6 +56,7 @@ on fs
     symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name/modemst2 /dev/block/bootdevice/by-name/modemst2
     symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name/ocdt /dev/block/bootdevice/by-name/ocdt
     symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name/persist /dev/block/bootdevice/by-name/persist
+#    symlink /dev/block/platform/soc/${ro.boot.bootdevice}/by-name/userdata /dev/block/bootdevice/by-name/userdata
 #    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 #    write /proc/sys/kernel/firmware_config/ignore_sysfs_fallback = 1
 #    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1

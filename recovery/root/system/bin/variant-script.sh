@@ -29,11 +29,11 @@ case $region in
                 ;;
             "22861")
             #India
-                resetprop ro.product.device "OP5929L1"
-                resetprop ro.product.odm.device "OP5929L1"
-                resetprop ro.product.product.device "OP5929L1"
-                resetprop ro.product.system_ext.device "OP5929L1"
-                resetprop ro.product.vendor.device "OP5929L1"
+                resetprop ro.product.device "OP595DL1"
+                resetprop ro.product.odm.device "OP595DL1"
+                resetprop ro.product.product.device "OP595DL1"
+                resetprop ro.product.system_ext.device "OP595DL1"
+                resetprop ro.product.vendor.device "OP595DL1"
                 resetprop ro.product.product.model "CPH2573"
                 resetprop ro.product.product.model "CPH2573"
                 resetprop ro.product.model "CPH2573"
@@ -73,11 +73,11 @@ case $region in
         ;;
     "23")
     #NA
-            resetprop ro.product.device "OP5929L1"
-            resetprop ro.product.odm.device "OP5929L1"
-            resetprop ro.product.product.device "OP5929L1"
-            resetprop ro.product.system_ext.device "OP5929L1"
-            resetprop ro.product.vendor.device "OP5929L1"
+            resetprop ro.product.device "OP595DL1"
+            resetprop ro.product.odm.device "OP595DL1"
+            resetprop ro.product.product.device "OP595DL1"
+            resetprop ro.product.system_ext.device "OP595DL1"
+            resetprop ro.product.vendor.device "OP595DL1"
             resetprop ro.product.product.model "CPH2583"
             resetprop ro.product.model "CPH2583"
             resetprop ro.product.system.model "CPH2583"
