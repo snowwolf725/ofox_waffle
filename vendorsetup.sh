@@ -19,7 +19,25 @@
 #
 FDEVICE="waffle"
 
-export TARGET_ARCH="arm64-v8a"
+fox_get_target_device() {
+local chkdev=$(echo "$BASH_SOURCE" | grep \"$FDEVICE\")
+   if [ -n "$chkdev" ]; then
+      FOX_BUILD_DEVICE="$FDEVICE"
+   else
+      chkdev=$(set | grep BASH_ARGV | grep \"$FDEVICE\")
+      [ -n "$chkdev" ] && FOX_BUILD_DEVICE="$FDEVICE"
+   fi
+}
+
+if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
+   fox_get_target_device
+fi
+
+echo "===================$1================"
+if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
+     	echo "test =============="
+	export FOX_VERSION="R12.2"
+fi
 
 # Some about us
 export FOX_VERSION="R12.1"
@@ -33,6 +51,11 @@ export TARGET_DEVICE_ALT="waffle, Waffle, OnePlus12, OnePlus 12, OP5929L1"
 export FOX_TARGET_DEVICES="waffle, Waffle, OnePlus12, OnePlus 12, OP5929L1"
 export BUILD_USERNAME="SnowWolf725"
 export BUILD_HOSTNAME="android-build"
+
+# Screen specifications
+export OF_CLOCK_POS=0
+export OF_SCREEN_H=2400
+export OF_STATUS_H=120
 
 # Use magisk boot for patching
 export OF_USE_MAGISKBOOT=1

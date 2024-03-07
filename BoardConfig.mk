@@ -28,6 +28,7 @@ TW_THEME := portrait_hdpi
 # TWRP specific build flags
 TW_FRAMERATE := 120
 TW_MAX_BRIGHTNESS := 3000
+#TW_DEFAULT_BRIGHTNESS := 400
 
 # Vibrator
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
